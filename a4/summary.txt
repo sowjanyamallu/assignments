@@ -1,0 +1,19 @@
+NUMBER OF USERS COLLECTED : 860
+NUMBER OF MESSAGES COLLECTED : 985
+NUMBER OF COMMUNITIES DISCOVERED : 28
+AVERAGE NUMBER OF USERS PER COMMUNITY : 26
+NUMBER OF INSTANCES PER CLASS FOUND :
+POSITIVES :98
+NEGATIVES :200
+ONE EXAMPLE FROM EACH CLASS :
+Instance for positive tweet:
+TWEET Pancake Pandemonium Books Entertainment iPhone App ***** $2.99 -&gt; FREE #Books… https://t.co/gwJqzkFWsO #iphoneBooksEntertainment
+positive value:1
+negative value:0
+
+Instance for negative tweet:
+TWEET:RT @ericuman: Bush's ethics lawyer says only way for Trump to avoid crippling conflicts is to sell his businesses. In full. 
+
+ https://t.co…
+positive value:0
+negative value:3

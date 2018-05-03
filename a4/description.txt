@@ -1,0 +1,14 @@
+collect.py: 
+               In collect.py , Initially execution starts from main(). Created a twitter object to get_twitter() establishing a twitter connection using get_twitte(). Collecting  tweets based on search/tweets in REST API with search word as 'iphone'. Using max_id taking 1000 tweets. Using pickle dumping whole tweets into pickle file named tweet_64.pkl. Creating a new text file called grph.txt writing ids of the users based on the screen names whose user profile is not protected and writing both the ids collected based on the screen names and screen name corresponding to grph.txt. 
+
+
+classify.py:
+                   In classify.py, Initially loading the data from the pickle file. Taking the data from the AFINN using the url and reading the data from it. Using tokenize function we will be dividing the tweets text into tokens. Using make_vocabulary function will be creating vocabulary for tokens. Converting features to a sparse matrix X where X[i,j] is the frequency of term j in tweet i.  'y' is a 1d numpy array of positive and negative . Let 1=positive, 0=negative.Computing z = X * \beta, where X is a CSR matrix. Calculating the average accuracy using cross valdation function and logistic regression as a classifier with nfolds=5. Finally we will be getting the accuracy value based on the division of tweets into positive and negative. In my classification i divided tweets who supporting and not supporting iphone based on pos and neg calculation.
+
+
+cluster.py:
+              In cluster.py we will be clustering the users based on the screen names and ids, Initially creating a graph with  edges as the screen names and ids correspondingly. Taking the connected components of the subgraph. For each component applying girvan_newman algorithm. writing the list of divided components to the pickle file named 'clstropt.pkl'.
+
+
+summarize.py:
+             In summarize.py we will be summarizing the data which is returned from other functions. In this function we will be loading the data from file of collect.py which are tweet_64.pkl and taking the tweets from the pkl file. For every text in the tweets and we can get he number of messages collected. To calculate the number of users collected we will laod the data from the clstropt.pkl and length of the set screenames is the solution. To calculate the number of communities detected we will be taking the data from cltropt.pkl . To calcualte the Average number of user per community can be calculated based on adding the total number of users from each community and dividing the total by number of communities. Number of instances of the positives and negatives are calculated from the opclf.pkl file which is created in the classify.py. one example for the class instance is given by taking one positive and one negative tweet from the classify.py with positive and negative values.
